@@ -1,8 +1,22 @@
 # TextInBox
-aviutl textinbox script
+## Description
+Creates a box that wraps the text object
 
-# Environment
-Aviutl 1.10 English version by Webcam
+## Environment
+Aviutl 1.10 English version by Webcam <a href="https://hapsung.tistory.com/24">(link)</a>
 
-# How to install
-Createg a 
+## How to install
+Create a folder named "Litti" in Script folder
+\n Move TextInBox.anm file into the created folder
+
+## How to Use
+Trackbar:
+<ul>
+  <li>Size: changes size of the box wrapping the text. If the box is too small, text will be cut</li>
+  <li>Rotation: changes rotation the box</li>
+  <li>Shape: changes the shape of the box. 1-> circle / 2 -> square / 3 -> triangle</li>
+</ul>
+Dialog:
+<ul>
+  <li>color: change the color of the box</li>
+</ul>
