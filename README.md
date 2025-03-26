@@ -1,0 +1,2 @@
+# TextInBox
+aviutl textinbox script
