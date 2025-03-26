@@ -6,8 +6,10 @@ Creates a box that wraps the text object
 Aviutl 1.10 English version by Webcam <a href="https://hapsung.tistory.com/24">(link)</a>
 
 ## How to install
-Create a folder named "litti" in Script folder
-<br>Download <a href="https://github.com/litti10/Litti_aviutl/blob/main/TextInBox.anm">TextInBox.anm</a> file into the folder
+1. Create a folder named "Litti" in Script folder
+![img](img.png "description")
+2. Download <a href="https://github.com/litti10/Litti_aviutl/blob/main/TextInBox/TextInBox.anm">TextInBox.anm</a> file into the folder
+
 
 ## How to Use
 Trackbar:
