@@ -1,0 +1,34 @@
+--[[ 
+This code is written based on Nure500's "random 8-direction fade in"
+
+Added function:
+1. can enable/disable fade option
+2. the movement is given starting from the first letter not the second
+]]
+--dialog:Start time,local start=0;Time interval,local time=0.03;Animation time,local speed=0.5;Move width,local amount=30;Seed value,local seed=0;Fade/chk, local enableFade=0;subtract,local subtract=0.5;
+local ox=obj.rand(-1,1,obj.index-subtract,1+seed)
+local oy=obj.rand(-1,1,obj.index-subtract,0+seed)
+local progress=-(time*(obj.index-subtract)-obj.time*(1/speed))-start
+local easing_circ_in=-math.sqrt((1-progress)^2)-1
+local easing_circ_out=math.sqrt(1-(progress-1)^2)
+local f_progress=0
+
+f_progress=easing_circ_out
+
+if 0 > progress then
+	obj.alpha = 0
+	obj.ox=ox*amount
+	obj.oy=oy*amount
+end
+
+if progress >= 0 and 1 > progress then
+	obj.ox=f_progress*ox*amount-ox*amount+obj.ox
+	obj.oy=f_progress*oy*amount-oy*amount+obj.oy
+	if enableFade == 1 then obj.alpha = f_progress
+	else  obj.alpha = 1 end
+end
+
+if progress >= 1 then
+	obj.ox=obj.ox
+	obj.oy=obj.oy
+end
