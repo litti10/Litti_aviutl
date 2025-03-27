@@ -7,6 +7,6 @@ This renewed script now has fading option. The fade would be applied if fade opt
 ![img](img.png "description")
 
 ## How to Install
-![../TextInBox/img.png](img.png "description")
+![img](https://github.com/litti10/Litti_aviutl/blob/main/TextInBox/img.png)
 1. Download Random 8-direction_in.anm and Random 8-direction_out.anm
 2. Put two anm file into script/nure500_anmiation
