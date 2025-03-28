@@ -26,4 +26,12 @@ You can download the translated scripts in here: <a href="https://drive.google.c
         <li>constant rotation</li>
         <li>oblique movement</li>
       </ul>
+  <li> <a href="https://take44444.github.io/">take44444_</a> <a href="https://drive.google.com/drive/folders/1obikkNszQwmH2V0MMPot1Rc7vW15GNQa?usp=drive_link">(download)</a> </li>
+      <ul>
+        <li>AS_col_vib_zoom_blur</li>
+        <li>AS_TrapNation_akkadaska</li>
+        <li>AS_snow_star</li>
+        <li>AS_glow</li>
+        <li>Lenna_AS</li>
+      </ul>
 </ul>
