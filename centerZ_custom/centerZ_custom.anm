@@ -1,0 +1,25 @@
+--track0:centerX,-1000,1000,0,1
+--track1:centerY,-1000,1000,0,1
+--track2:centerZ,-1000,1000,0,1
+--check0:adjust coordinates to img size,1
+--dialog:set by anchor/chk,local isAnchor=0;
+if(isAnchor==1)then
+    obj.setanchor("track",0,"line")
+    local dx=obj.track0
+    local dy=obj.track1
+end
+
+if(obj.check0)then
+    obj.cx	=obj.track0/100*obj.w
+    obj.cy	=obj.track1/100*obj.h
+    obj.ox	=obj.track0/100*obj.w*obj.getvalue("zoom")/100
+    obj.oy	=obj.track1/100*obj.h*obj.getvalue("zoom")/100
+else
+    obj.cx	=obj.track0
+    obj.cy	=obj.track1
+    obj.ox	=obj.track0*obj.getvalue("zoom")/100
+    obj.oy	=obj.track1*obj.getvalue("zoom")/100
+end
+
+obj.cz	=obj.track2
+obj.oz	=obj.track2
