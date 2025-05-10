@@ -1,0 +1,46 @@
+--track0:Z rotation,-1080,1080,0,0.1
+--dialog:obj centerX, local currX=0;obj centerY, local currY=0;> from obj/chk, local getMy=0;target centerX, local targetX=0;target centerY, local targetY=0;> from layer/chk, local getOther=0;> layer num, local layerNum=0;
+
+local my={}
+local other={}
+local dx=0
+local dy=0
+
+if getMy == 1 then
+    my[0]=obj.cx
+    my[1]=obj.cy
+    
+else
+    my[0]=currX
+    my[1]=currY
+end
+
+if getOther == 1 then
+    other[0]=obj.getvalue("layer" .. layerNum .."\.cx")+obj.getvalue("layer" .. layerNum .."\.x")
+    other[1]=obj.getvalue("layer" .. layerNum .."\.cy")+obj.getvalue("layer" .. layerNum .."\.y")
+else
+    other[0]=targetX
+    other[1]=targetY
+end
+
+
+dx=my[0]-other[0]
+dy=my[1]-other[1]
+
+rad = math.rad(obj.track0)
+
+rot_x=dx*math.cos(rad)-dy*math.sin(rad)
+rot_y=dx*math.sin(rad)+dy*math.cos(rad)
+rot_x_init=dx*math.cos(0)-dy*math.sin(0)
+rot_y_init=dx*math.sin(0)+dy*math.cos(0)
+
+temp_x=rot_x_init+other[0]
+temp_y=rot_y_init+other[1]
+
+dist_x=rot_x+other[0]-temp_x
+dist_y=rot_y+other[1]-temp_y
+
+obj.ox=obj.ox+dist_x
+obj.oy=obj.oy+dist_y
+
+obj.rz=obj.rz+obj.track0
